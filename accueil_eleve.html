@@ -10,6 +10,12 @@
 		 <title>moncartable.com</title> 
 	 </head> 
 	 <body>
+		 <div class="row">
+		 	<div class="col-xs-offset-4 col-xs-4 alert alert-success center" style="display: none;">
+			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+
+			</div>
+		</div>
 	 	<div class="row" style="margin-top:10px;margin-bottom:10px">
 		 	<button class="col-md-offset-1 col-md-2 btn btn-primary" href="#"> &lt;- semaine précédente</button>
 		 	<h1 class="col-md-6 center nomargin">Septembre 2016</h1>
@@ -32,73 +38,141 @@
 
 	 		</div>
 
-	 		<div class="col-md-2 semaine"  onclick="redirect('jour_eleve');" style="padding: 0">
+	 		<div class="col-md-2 semaine"style="padding: 0">
 
-	 		 	<div class="edt edt-small transparent"><h1>Lundi 24</h1></div>	
-	 			<div class="edt edt-big rouge"><h1>Français</h1></div>
-	 			<div class="edt edt-big bleu"><h1>Maths</h1></div>
+	 		 	<div onclick="javascript:openfenetre()" class="edt edt-small transparent "><span class="poids-exposant" style="color: green;"><b>~5kg</b></span><h1>Lundi 24</h1></div>	
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big rouge"><h1>Français</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big bleu"><h1>Maths</h1></div>
 	 			<div class="edt edt-small blanc"><h1>Midi</h1></div>
 
-	 			<div class="edt edt-big vert"><h1>EPS</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big vert"><h1>EPS</h1></div>
 	 			<div class="edt edt-small noir" ><h1></h1></div>
 
 	 		</div>
 
-	 		<div class="col-md-2 semaine"  onclick="redirect('jour_eleve');"  style="padding: 0"> 
-	 			<div class="edt edt-small transparent"> <h1>Mardi 25</h1></div>
-	 			<div class="edt edt-big rouge"><h1>Français</h1></div>
-	 			<div class="edt edt-small vert"><h1>SVT</h1></div>
+	 		<div class="col-md-2 semaine" style="padding: 0"> 
+	 			<div   onclick="javascript:openfenetre()"  class="edt edt-small transparent"><span class="poids-exposant" style="color: green;"><b>~4kg</b></span> <h1>Mardi 25</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big rouge"><h1>Français</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-small vert"><h1>SVT</h1></div>
 	 			<div class="edt edt-small blanc"><h1>Midi</h1></div>
 
-	 			<div class="edt edt-big orange"><h1>Technologie</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big orange"><h1>Technologie</h1></div>
 	 			<div class="edt edt-big noir"><h1></h1></div>
 
 	 		</div>
-	 		<div class="col-md-2 semaine"  onclick="redirect('jour_eleve');"  style="padding: 0">
-	 			 <div class="edt edt-small transparent"> <h1>Mercredi 26</h1></div>
-	 			<div class="edt edt-big bleu"><h1>Maths</h1></div>
-	 			<div class="edt edt-big violet"><h1>Musique</h1></div>
+	 		<div class="col-md-2 semaine" style="padding: 0">
+	 			<div  onclick="javascript:openfenetre()"class="edt edt-small transparent"> <span class="poids-exposant" style="color: orange;"><b>~6kg</b></span><h1>Mercredi 26</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big bleu"><h1>Maths</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big violet"><h1>Musique</h1></div>
 	 			<div class="edt noir" style="height: 280px;"><h1></h1></div>
 
 	 		</div>
-	 		<div class="col-md-2 semaine"  onclick="redirect('jour_eleve');"  style="padding: 0"> 
-	 			<div class="edt edt-small transparent"> <h1>Jeudi 27</h1></div>
-	 			<div class="edt edt-big jaune"><h1>Histoire Géo</h1></div>
-	 			<div class="edt edt-small vert"><h1>SVT</h1></div>
+	 		<div class="col-md-2 semaine"  style="padding: 0"> 
+	 			<div   onclick="javascript:openfenetre()" class="edt edt-small transparent"> <span class="poids-exposant" style="color: red;"><b>~7kg</b></span><h1>Jeudi 27</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big jaune"><h1>Histoire Géo</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-small vert"><h1>SVT</h1></div>
 	 			<div class="edt edt-small blanc"><h1>Midi</h1></div>
 
 	 			
-	 			<div class="edt edt-big cyan"><h1>Arts Plastiques</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big cyan"><h1>Arts Plastiques</h1></div>
 	 			<div class="edt edt-big noir"><h1></h1></div>
 
 	 		</div>
-	 		<div class="col-md-2 semaine"  onclick="redirect('jour_eleve');"  style="padding: 0"> 
-	 			<div class="edt edt-small transparent"> <h1>Vendredi 28</h1></div>
+	 		<div class="col-md-2 semaine" style="padding: 0"> 
+	 			<div   onclick="javascript:openfenetre()" class="edt edt-small transparent"> <span class="poids-exposant" style="color: green;"><b>~5kg</b></span><h1>Vendredi 28</h1></div>
 	 			<div class="edt edt-big noir"><h1></h1></div>
-	 			<div class="edt edt-big jaune"><h1>Histoire Géo</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big jaune"><h1>Histoire Géo</h1></div>
 	 			<div class="edt edt-small blanc"><h1>Midi</h1></div>
 
-	 			<div class="edt edt-big rose"><h1>Physique Chimie</h1></div>
+	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big rose"><h1>Physique Chimie</h1></div>
 	 			<div class="edt edt-small noir"><h1></h1></div>
 
 	 		</div>
 	 	</div>
 
 
-	 	<div class="jaune" style="height:100%;width: 50%;display: absolute;">
-
-	 	Lundi 28 Septembre 2016
-	 		Francais : 9h-11h
-	 		- Livre de français 4ème 1,5kg
-	 		Maths : 11h-13h
-	 		- Livre de Maths 4ème 1,5kg
-	 		- Calculette 200g
-	 		EPS : 14h-15h
-	 		- Jogging 300g
-	 		- Basket Mizuno Wave Ultima 7 290g
-
-	 		total : 3,790 kg
-	 		final : 4,890 kg
+	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 0%;  position: absolute;top: 0;right: 0; border-left: 2px solid black ">
+		 	<span onclick="javascript:closefenetre()" class="glyphicon glyphicon-remove"></span> 
+		 	
+		 	<div style="padding-left: 40px">
+			 	<h1><b>Lundi 28 Septembre 2016 </b></h1>
+			 	<h2>Francais : 9h - 11h</h2>
+			 	<ul> 
+			 		<li><del><span id="livrefrancais">Livre de français 4ème <span style="color: gray"><b>1,5kg</b></span></span></del> <i id="remy">pris par :remy hanquez</i> <a onclick="$(this).hide();$('#remy').hide();$('#livrefrancais').unwrap();">je le prends</a></li>
+			 	</ul>
+			 	<h2>Maths : 11h-13h</h2>
+			 	<ul> 
+				 	<li>Livre de Maths 4ème <span style="color: gray"><b>1,5kg</b></span></li>
+				 	<li>Calculette <span style="color: gray"><b>200g</b></span></li>
+			 	</ul> 
+			 	<h2>EPS : 14h-15h</h2>
+			 	<ul> 
+			 		<li>Jogging <span style="color: gray"><b>300g</b></span></li>
+			 		<li>Basket Mizuno Wave Ultima 7 <span style="color: gray"><b>290g</b></span></li>
+				</ul> 
+			 	<h3 >Total : 3,790 kg</h3>
+				 	<ul> 
+				 		<li>Trousse <span style="color: gray"><b>400g</b></span></li>
+				 		<li>Poids du sac vide <span style="color: gray"><b>300g</b></span></li>
+				 		<li>Carnet de correspondance <span style="color: gray"><b>200g</b></span></li>
+				 		<li>Rubik's cube <span style="color: gray"><b>200g</b></span></li>
+					</ul> 
+			 	<h3 style="color: green">Final : 4,890 kg</h3>
+			 	</p>
+		 	</div>
 	 	</div>
+		<div id="myModal" class="modal fade">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title">Math 11h-13h</h3>
+		      </div>
+		      <div class="modal-body">
+				  <h4>Fourniture(s) : </h4>
+			      <ul> 
+			 		<li class="tooltip-info" href="#" data-toggle="tooltip" 
+			 		title="Transmath 4e 
+			 		Edition : 2011 
+			 		Collection : Transmath Maths Collège">Livre de maths 4ème <span style="color: gray"><b>1,5kg</b></span></li>
+				  </ul>
+
+				  <a data-dismiss="modal" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-plus"></span> Ajouter une fourniture </a>
+				  <a style="float: right;color: red"> Je serais absent à ce cours </a>
+		      
+			  </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
+		<div id="myModal2" class="modal fade">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title">Math 11h-13h</h3>
+		      </div>
+		      <div class="modal-body">
+			      <div class="row">
+					  <label class="col-xs-3" for="nom">Nom :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="nom">
+					  <label class="col-xs-3" for="desc">Description :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="desc">
+					  <label class="col-xs-3" for="poids">Poids :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="poids">	
+				   </div>	
+			  </div>
+		      <div class="modal-footer">
+		     	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+		        <button type="button" class="btn btn-primary" onclick="$('.alert').show()" data-dismiss="modal">Enregistrer la fourniture</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
 	 </body> 
  </html> 

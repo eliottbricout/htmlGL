@@ -17,3 +17,15 @@ function redirect(page){
 	console.log(page+".html");
 	window.location.replace(page+".html");
 }
+
+function closefenetre(){
+	$("#fenetre").css("width","0%");
+}
+
+function openfenetre(){
+	$("#fenetre").css("width","30%");
+}
+
+function opencours(){
+	window.open("cours_eleve.html");
+}

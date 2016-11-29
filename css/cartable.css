@@ -90,6 +90,23 @@
 	background: #AA6C39;
 }
 
+.gris-clair{
+	background: #ddd;
+}
+
 .transparent{
 	background: transparent;
+}
+
+.tooltip-info:hover{
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.poids-exposant{
+	position: absolute;
+	right: 0; 
+	font-size: 17px;
+    margin-right: 7px;
+    margin-top: 2px;
 }

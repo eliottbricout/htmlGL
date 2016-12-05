@@ -110,3 +110,12 @@
     margin-right: 7px;
     margin-top: 2px;
 }
+.bouton-menu{
+	height: 40px;
+	border-right: solid 1px darkgray;
+	color: white;
+}
+.bouton-menu:hover{
+	background: darkgray;
+	color: black;
+}

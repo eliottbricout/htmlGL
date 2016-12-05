@@ -10,12 +10,17 @@
 		 <title>moncartable.com</title> 
 	 </head> 
 	 <body>
-		 <div class="row">
-		 	<div class="col-xs-offset-4 col-xs-4 alert alert-success center" style="display: none;">
-			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-
-			</div>
-		</div>
+		<div class="row" style="background: black;height: 40px">
+		 	<div class="col-md-offset-2 col-md-2 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_eleve')">
+		 		<h4 class="center">Accueil</h4>
+	 		</div>
+	 		<div class="col-md-2 bouton-menu" onclick="redirect('profil')">
+		 		<h4 class="center">Profil</h4>
+	 		</div>
+	 		<div class="col-md-2 bouton-menu" onclick="redirect('index')">
+		 		<h4 class="center">se deconnecter</h4>
+		 		</div>
+	 	</div>
 	 	<div class="row" style="margin-top:10px;margin-bottom:10px">
 		 	<button class="col-md-offset-1 col-md-2 btn btn-primary" href="#"> &lt;- semaine précédente</button>
 		 	<h1 class="col-md-6 center nomargin">Septembre 2016</h1>
@@ -89,10 +94,15 @@
 
 	 		</div>
 	 	</div>
+		 <div class="row">
+		 	<div class="col-xs-offset-4 col-xs-4 alert alert-success center" style="display: none;">
+			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 
+			</div>
+		</div>
 
-	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 0%;  position: absolute;top: 0;right: 0; border-left: 2px solid black ">
-		 	<span onclick="javascript:closefenetre()" class="glyphicon glyphicon-remove"></span> 
+	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 30%;  position: absolute;top: 0;right: 0; border-left: 2px solid black;display: none">
+		 	<span onclick="javascript:closefenetre()" class="glyphicon glyphicon-remove" style="cursor: e-resize"></span> 
 		 	
 		 	<div style="padding-left: 40px">
 			 	<h1><b>Lundi 28 Septembre 2016 </b></h1>

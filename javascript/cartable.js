@@ -19,13 +19,20 @@ function redirect(page){
 }
 
 function closefenetre(){
-	$("#fenetre").css("width","0%");
+	$("#fenetre").hide();
 }
 
 function openfenetre(){
-	$("#fenetre").css("width","30%");
+	$("#fenetre").show();
 }
 
 function opencours(){
 	window.open("cours_eleve.html");
+}
+
+function switchson(){
+	if($("#son").text().charAt(0) == 'R')
+		$("#son").html("Cyril Hanquezw");
+	else 
+		$("#son").html("Remy Hanquez");
 }

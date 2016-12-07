@@ -1,0 +1,105 @@
+ <!DOCTYPE> 
+ <html lang="en"> 
+	 <head>
+	 <link rel="stylesheet" href="css/cartable.css"></link>
+	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	 	<script src="javascript/cartable.js"></script> <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+		 <title>moncartable.com</title> 
+	 </head> 
+	 <body>
+		<div class="row">
+			<div class="top-menu">
+			 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_admin')">
+			 		<h4 class="center">Accueil</h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil')">
+			 		<h4 class="center">Profil</h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
+		 			<h4 class="center">se deconnecter</h4>
+		 		</div>
+	 		</div>
+	 	</div>
+	 	<div class="row">
+			<button data-toggle="modal" data-target="#myModal" type="button" class="col-xs-offset-3 col-xs-6 btn btn-primary btn-lg btn-admin">Créer une nouvelle élève</button>
+			<select class="select col-xs-offset-3 col-xs-6" onchange="javascript:changeeleve()">
+					<option value="1">Remy Hanquez</option>
+			  		<option value="2">Eliott Bricout</option>
+			  		<option value="3">Lucas Nomtroplong</option>
+			  		<option value="4">GuiGui Metro</option>
+			  		<option value="1">Jordan Bouchoucha</option>
+			  		<option value="2">Maggy Tarestcassé</option>
+			  		<option value="3">Maguy Tarénaze</option>
+			  		<option value="4">Marc Assin</option>
+			  		<option value="1">Marie Nofaringite</option>
+			  		<option value="2">Marie Rouana</option>
+			  		<option value="3">Milène Micoton</option>
+			  		<option value="4">Modeste Oma</option>
+			  		<option value="1">Sacha Hutte</option>
+			  		<option value="2">Sacha Touille</option>
+			  		<option value="3">Sam Convient</option>
+			  		<option value="4">Sam Féchier</option>
+			</select>
+
+			<div id="formulairemodifeleve" class="col-xs-offset-3 col-xs-6">
+					  <label class="col-xs-3" for="nom">Nom :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="nom" value="Hanquez">
+					  <label class="col-xs-3" for="prenom">Prenom :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="prenom" value="Remy">
+					  <label class="col-xs-3" for="age">Age :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="number" id="age" value="21">
+					  <label class="col-xs-3" for="tel">Télèphone :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="number" id="tel" value="0612545852">
+					  <label class="col-xs-3" for="ville">Ville :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="ville" value="bethune">
+					  <label class="col-xs-3" for="codepostal">Codepostal :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="codepostal" value="62120">		
+					  <label class="col-xs-3" for="rue">Rue :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="rue" value="batiment 3 appartement 13 rue du moulin a tabac">
+					  <label class="col-xs-3" for="mail">Email :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="email" id="mail" value="remy.hanquez@gmail.com">
+			</div>	
+			<button type="button" onclick="$('#alert3').show()" class="col-xs-offset-7 col-xs-2 btn btn-primary btn-lg btn-admin">Modifier élève</button>
+		</div>
+
+
+		 
+
+		<div id="myModal" class="modal fade">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title">Création d'un nouvelle élève</h3>
+		      </div>
+		      <div class="modal-body">
+			      <div class="row">
+					  <label class="col-xs-3" for="nom">Nom :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="nom">
+					  <label class="col-xs-3" for="prenom">Prenom :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="prenom">
+					  <label class="col-xs-3" for="age">Age :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="number" id="age">
+					  <label class="col-xs-3" for="age">Télèphone :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="number" id="tel">
+					  <label class="col-xs-3" for="age">Ville :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="ville">
+					  <label class="col-xs-3" for="age">Codepostal :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="codepostal">		
+					  <label class="col-xs-3" for="age">Rue :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="rue">
+					  <label class="col-xs-3" for="age">Email :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="email" id="age">
+				   </div>	
+			  </div>
+		      <div class="modal-footer">
+		     	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+		        <button type="button" class="btn btn-primary" onclick="$('#alert').show()" data-dismiss="modal">Créer l'élève</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+	 </body> 
+	 <footer>
+	 	<div class="row">
+		 	<div id="alert" class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+			  <strong>Eleve créé!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+			  <strong>Eleve ajouté!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>	
+			<div id="alert3" class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+			  <strong>Eleve modifié!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+	 	</div>
+	 </footer>
+ </html> 

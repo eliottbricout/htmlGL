@@ -10,24 +10,26 @@
 		 <title>moncartable.com</title> 
 	 </head> 
 	 <body>
-		<div class="row" style="background: black;height: 40px">
-		 	<div class="col-md-offset-2 col-md-2 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_parent')">
-		 		<h4 class="center">Accueil</h4>
-	 		</div>
-	 		<div class="col-md-2 bouton-menu" onclick="redirect('profil')">
-		 		<h4 class="center">Profil</h4>
-	 		</div>
-	 		<div class="col-md-2 bouton-menu" onclick="switchson()">
-		 		<h4 class="center" id="son">Remy Hanquez</h4>
-	 		</div>
-	 		<div class="col-md-2 bouton-menu" onclick="redirect('index')">
-	 			<h4 class="center">se deconnecter</h4>
+		<div class="row">
+			<div class="top-menu">
+			 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_parent')">
+			 		<h4 class="center">Accueil</h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil')">
+			 		<h4 class="center">Profil</h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="switchson()">
+			 		<h4 class="center" id="son">Remy Hanquez</h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
+		 			<h4 class="center">se deconnecter</h4>
+		 		</div>
 	 		</div>
 	 	</div>
 	 	<div class="row" style="margin-top:10px;margin-bottom:10px">
-		 	<button class="col-md-offset-1 col-md-2 btn btn-primary" href="#"> &lt;- semaine précédente</button>
-		 	<h1 class="col-md-6 center nomargin">Septembre 2016</h1>
-		 	<button class="col-md-2 btn btn-primary" href="#">  semaine suivante -&gt;</button>
+		 	<button class="col-md-offset-1 col-md-2 col-xs-3 btn btn-primary" href="#"> &lt;- semaine précédente</button>
+		 	<h1 class="col-xs-6 center nomargin">Septembre 2016</h1>
+		 	<button class="col-md-2 col-xs-3 btn btn-primary" href="#">  semaine suivante -&gt;</button>
 	 	</div>
 
 	 	<div class="row">
@@ -97,12 +99,6 @@
 
 	 		</div>
 	 	</div>
-		 <div class="row">
-		 	<div class="col-xs-offset-4 col-xs-4 alert alert-success center" style="display: none;">
-			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-
-			</div>
-		</div>
 
 	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 30%;  position: absolute;top: 0;right: 0; border-left: 2px solid black;display: none">
 		 	<span onclick="javascript:closefenetre()" class="glyphicon glyphicon-remove" style="cursor: e-resize"></span> 
@@ -111,7 +107,7 @@
 			 	<h1><b>Lundi 28 Septembre 2016 </b></h1>
 			 	<h2>Francais : 9h - 11h</h2>
 			 	<ul> 
-			 		<li><del><span id="livrefrancais">Livre de français 4ème <span style="color: gray"><b>1,5kg</b></span></span></del> <i id="remy">pris par :remy hanquez</i> <a onclick="$(this).hide();$('#remy').hide();$('#livrefrancais').unwrap();">je le prends</a></li>
+			 		<li><del><span id="livrefrancais">Livre de français 4ème <span style="color: gray"><b>1,5kg</b></span></span></del> <i id="remy">pris par : jordan bouchoucha</i> <a onclick="$(this).hide();$('#remy').hide();$('#livrefrancais').unwrap();">mon enfant le prend</a></li>
 			 	</ul>
 			 	<h2>Maths : 11h-13h</h2>
 			 	<ul> 
@@ -153,7 +149,7 @@
 				  </ul>
 
 				  <a data-dismiss="modal" data-toggle="modal" data-target="#myModal2"><span class="glyphicon glyphicon-plus"></span> Ajouter une fourniture </a>
-				  <a style="float: right;color: red"> Je serais absent à ce cours </a>
+				  <a style="float: right;color: red"> Mon enfant sera absent à ce cours </a>
 		      
 			  </div>
 		      <div class="modal-footer">
@@ -188,4 +184,11 @@
 		</div><!-- /.modal -->
 		
 	 </body> 
+	 <footer>
+	 	<div class="row">
+		 	<div class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+	 	</div>
+	 </footer>
  </html> 

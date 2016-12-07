@@ -19,11 +19,11 @@ function redirect(page){
 }
 
 function closefenetre(){
-	$("#fenetre").hide();
+	$("#fenetre").hide("progress");
 }
 
 function openfenetre(){
-	$("#fenetre").show();
+	$("#fenetre").show("progress");
 }
 
 function opencours(){
@@ -32,7 +32,27 @@ function opencours(){
 
 function switchson(){
 	if($("#son").text().charAt(0) == 'R')
-		$("#son").html("Cyril Hanquezw");
+		$("#son").html("Cyril Hanquez");
 	else 
 		$("#son").html("Remy Hanquez");
+}
+
+function changeclass(){
+	$("#listeleve").hide("progress");
+	var li =$("#listeleve li");
+	var ul =$("#listeleve");
+	ul.empty();
+	for(var i=1; i<=li.length;i++){
+		ul.append(li.eq((i*7)%25));
+	}
+	ul.append('<a data-dismiss="modal" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-plus" style="color: blue"></span> ajouter un élève</a>');
+	$("#listeleve").show("progress");
+
+}
+
+function changeeleve(){
+	$("#formulairemodifeleve").hide("progress");
+	console.log("eee");
+	$("#formulairemodifeleve").show("progress");
+
 }

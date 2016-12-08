@@ -1,0 +1,201 @@
+ <!DOCTYPE> 
+ <html lang="en"> 
+	 <head>
+	 <link rel="stylesheet" href="css/cartable.css"></link>
+	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	 	<script src="javascript/cartable.js"></script> <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+		 <title>moncartable.com</title> 
+	 </head> 
+	 <body>
+		<div class="row">
+			<div class="top-menu">
+			 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_admin')">
+			 		<h4 class="center">Accueil</h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil')">
+			 		<h4 class="center">Profil</h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
+		 			<h4 class="center">se deconnecter</h4>
+		 		</div>
+	 		</div>
+	 	</div>
+	 	<div class="row">
+			<button data-toggle="modal" data-target="#myModal" type="button" class="col-xs-offset-3 col-xs-6 btn btn-primary btn-lg btn-admin">Créer une nouvelle classe</button>
+			<select class="select col-xs-offset-3 col-xs-6" onchange="javascript:changeclass()">
+					<option value="1">fourniture 1</option>
+					<option value="2">fourniture 2</option>
+					<option value="3">fourniture 3</option>
+					<option value="4">fourniture 4</option>
+					<option value="5">fourniture 5</option>
+					<option value="6">fourniture 6</option>
+					<option value="7">fourniture 7</option>
+					<option value="8">fourniture 8</option>
+					<option value="9">fourniture 9</option>
+					<option value="10">fourniture 10</option>
+					<option value="11">fourniture 11</option>
+					<option value="12">fourniture 12</option>
+					<option value="13">fourniture 13</option>
+					<option value="14">fourniture 14</option>
+					<option value="15">fourniture 15</option>
+					<option value="16">fourniture 16</option>
+					<option value="17">fourniture 17</option>
+					<option value="18">fourniture 18</option>
+					<option value="19">fourniture 19</option>
+					<option value="20">fourniture 20</option>
+					<option value="21">fourniture 21</option>
+					<option value="22">fourniture 22</option>
+					<option value="23">fourniture 23</option>
+					<option value="24">fourniture 24</option>
+			</select>
+
+			<ul id="listeleve" class="col-xs-offset-4 col-xs-5 font18">
+				<li>Remy Hanquez <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Eliott Bricout	<span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Lucas Nomtroplong <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>GuiGui Metro <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Jordan Bouchoucha<span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Maggy Tarestcassé<span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Maguy Tarénaze <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Marc Assin	 <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Marie Nofaringite <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Marie Rouana <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Marie Vière <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Marshall Essence <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Matt Lecul	<icon class="glyphicon glyphicon-remove" style="color: red"></icon></li>
+				<li>Maud Erateur <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Maude Cambrone <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Mehdi Cament <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Mehdi Térannée <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Mélanie Zeteaufrais <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Milène Micoton <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Modeste Oma <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Sacha Hutte <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Sacha Touille <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Sam Convient <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Sam Féchier <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<li>Sam Lécasse <span class="glyphicon glyphicon-remove" style="color: red"></span></li>
+				<a data-dismiss="modal" data-toggle="modal" data-target="#myModal3"><span class="glyphicon glyphicon-plus" style="color: blue"></span> ajouter un élève</a>
+			</ul>
+		</div>
+
+
+		 
+
+		<div id="myModal" class="modal fade">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title">Création d'une nouvelle classe</h3>
+		      </div>
+		      <div class="modal-body">
+			      <div class="row">
+					  <label class="col-xs-3" for="nom">Nom :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="nom">
+					  <label class="col-xs-3" for="lvl">Niveau :</label> 
+					  <select style="margin: 0px 0px 5px 0px" class="select col-xs-7" type="text" id="lvl">
+					 		<option value="1">6ème</option>
+					  		<option value="2">5ème</option>
+					  		<option value="3">4ème</option>
+					  		<option value="4">3ème</option>
+					  </select> 
+					  <label class="col-xs-3" for="tuteur">professeur principal :</label> 
+					  <select style="margin: 0px 0px 5px 0px" class="select col-xs-7" type="text" id="tuteur">	
+					  		<option value="1">ABERNATHY, Ralph</option>
+					  		<option value="2">ARAGON, L</option>
+					  		<option value="3">ARGOULT</option>
+					  		<option value="1">ARON, Raymond</option>
+					  		<option value="2">BARCLAY, Eddie</option>
+					  		<option value="3">BARRAULT, Jean-Louis</option>
+					  		<option value="1">BON, Frédéric</option>
+					  		<option value="2">BURNIER, Michel-Antoine</option>
+					  		<option value="3">CAMUS, Albert</option>
+					  		<option value="1">CHEVERNY, Julien</option>
+					  		<option value="2">CHIRAC, Jacques	</option>
+					  		<option value="3">CLAUDIUS-PETIT, Eugène</option>
+					  		<option value="1">COLOMBO, Pia</option>
+					  		<option value="2">CREVEL, René </option>
+					  		<option value="3">DALADIER, Edouard </option>
+					  		<option value="1">DE SAINT-JORRE </option>
+					  		<option value="2">DEBRé, Michel </option>
+					  </select> 
+				   </div>	
+			  </div>
+		      <div class="modal-footer">
+		     	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+		        <button type="button" class="btn btn-primary" onclick="showalert('alert')" data-dismiss="modal">Créer la classe</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div id="myModal3" class="modal fade">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title">Ajouter un élève</h3>
+		      </div>
+		      <div class="modal-body">
+			      	<div class="row">
+						<select class="select col-md-offset-2 col-xs-8">
+						  <option value="1">Alain Térieur</option>
+						  <option value="2">Alain Verse</option>
+						  <option value="3">Alan Foiré</option>
+						  <option value="4">Alban Bou</option>
+						  <option value="5">Aldo Berman</option>
+						  <option value="6">Alex Cité</option>
+						  <option value="7">Alex Pyration</option>
+						  <option value="8">Alex Térieur</option>
+						  <option value="9">Alex Trémité</option>
+						  <option value="10">Ali Gator</option>
+						  <option value="11">Alonso Balmasqué</option>
+						  <option value="12">Alphonse Danlemur</option>
+						  <option value="13">Amar Di</option>
+						  <option value="14">Amédée Bu</option>
+						  <option value="15">Amédée Pan</option>
+						  <option value="16">André Desartistes</option>
+						  <option value="17">Anna Conda</option>
+						  <option value="18">Anna Purna</option>
+						  <option value="19">Anna Tomie</option>
+						  <option value="20">Anne Orak</option>	
+						  <option value="21">Annie Versaire</option>
+						  <option value="22">Aubin Sahalor</option>
+						  <option value="23">Aude Javel</option>
+						  <option value="24">Aude Vaisselle</option>
+						  <option value="25">Jude Orange</option>
+						  <option value="26">Jules Hule</option>
+						  <option value="27">Juste Icier</option>
+						  <option value="28">Justin Ptipeu</option>
+						</select>				   
+					</div>	
+			  </div>
+		      <div class="modal-footer">
+		     	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+		        <button type="button" class="btn btn-primary" onclick="showalert('alert2')" data-dismiss="modal">Ajouter l'élève</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+	 </body> 
+	 <footer>
+	 	<div class="row">
+		 	<div id="alert" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
+			  <strong>Fourniture créée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
+			  <strong>Fourniture Acceptée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
+			  <strong>Fourniture Refusée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+	 	</div>
+	 </footer>
+ </html> 

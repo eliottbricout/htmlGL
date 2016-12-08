@@ -10,9 +10,13 @@
 		 <title>moncartable.com</title> 
 	 </head> 
 	 <body> 
-		 	<input type="text" id=name name="name">
-		 	<input type="password" name="password">
-		 	<a href="#">mot de passe oublié</a>
-		 	<button onclick="javascript:login()" type="submit">se connecter</button>
+	 	<div class="row">
+		 	<div class="form-group form-pass-name">
+			 	<input class="form-control" placeholder="nom" type="text" id=name name="name" style="margin-bottom: 10px">
+			 	<input class="form-control" placeholder="mot de passe" type="password" name="password" style="margin-bottom: 10px">
+			 	<a class="col-md-offset-8" href="#">mot de passe oublié</a>
+			 	<button class="btn btn-lg btn-primary btn-block" onclick="javascript:login()" type="submit">se connecter</button>	
+	 		</div>
+	 	</div>
 	 </body> 
  </html> 

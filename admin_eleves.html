@@ -53,8 +53,12 @@
 					  <label class="col-xs-3" for="codepostal">Codepostal :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="codepostal" value="62120">		
 					  <label class="col-xs-3" for="rue">Rue :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="text" id="rue" value="batiment 3 appartement 13 rue du moulin a tabac">
 					  <label class="col-xs-3" for="mail">Email :</label> <input style="margin-bottom: 5px" class="col-xs-7" type="email" id="mail" value="remy.hanquez@gmail.com">
-			</div>	
-			<button type="button" onclick="$('#alert3').show()" class="col-xs-offset-7 col-xs-2 btn btn-primary btn-lg btn-admin">Modifier élève</button>
+			</div>	onclick="showalert('alert')"
+			</div class="col-xd-12">
+				<button type="button" onclick="showalert('alert2')" class="col-xs-offset-4 col-xs-2 btn btn-danger btn-lg btn-admin">Supprimer élève</button>
+				<button type="button" onclick="showalert('alert3')" class="col-xs-offset-1 col-xs-2 btn btn-primary btn-lg btn-admin">Modifier élève</button>
+			</div class="col-xd-12">
+
 		</div>
 
 
@@ -83,7 +87,7 @@
 			  </div>
 		      <div class="modal-footer">
 		     	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-		        <button type="button" class="btn btn-primary" onclick="$('#alert').show()" data-dismiss="modal">Créer l'élève</button>
+		        <button type="button" class="btn btn-primary" onclick="showalert('alert')" data-dismiss="modal">Créer l'élève</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -91,13 +95,13 @@
 	 </body> 
 	 <footer>
 	 	<div class="row">
-		 	<div id="alert" class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+		 	<div id="alert" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Eleve créé!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
-			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Eleve ajouté!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>	
-			<div id="alert3" class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+			<div id="alert3" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Eleve modifié!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
 	 	</div>

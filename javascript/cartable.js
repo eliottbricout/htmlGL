@@ -52,7 +52,19 @@ function changeclass(){
 
 function changeeleve(){
 	$("#formulairemodifeleve").hide("progress");
-	console.log("eee");
 	$("#formulairemodifeleve").show("progress");
 
+}
+
+function changeemploi(){
+	$("#emploidutemps").hide("progress");
+	$("#emploidutemps").show("progress");
+
+}
+
+function showalert(alert){
+	$("#"+alert).show();
+	setTimeout(function() {
+		$("#"+alert).hide();
+	}, 2000); 
 }

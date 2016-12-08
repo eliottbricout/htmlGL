@@ -23,11 +23,28 @@
 		 		</div>
 	 		</div>
 	 	</div>
-		
-		<div class="row" style="margin-top:10px;margin-bottom:10px">
-		 	<button class="col-md-offset-1 col-md-2 col-xs-3 btn btn-primary" href="#"> </button>
-		 	<button class="col-md-2 col-xs-3 btn btn-primary" href="#">  Ajouter un cours </button>
-	 	</div>
+		<select class="select col-xs-offset-3 col-xs-6" onchange="javascript:changeemploi()">
+					<option value="1">6ème1</option>
+			  		<option value="2">6ème2</option>
+			  		<option value="3">6ème3</option>
+			  		<option value="4">6ème4</option>
+			  		<option value="1">5ème1</option>
+			  		<option value="2">5ème2</option>
+			  		<option value="3">5ème3</option>
+			  		<option value="4">5ème4</option>
+			  		<option value="1">4ème1</option>
+			  		<option value="2">4ème2</option>
+			  		<option value="3">4ème3</option>
+			  		<option value="4">4ème4</option>
+			  		<option value="1">3ème1</option>
+			  		<option value="2">3ème2</option>
+			  		<option value="3">3ème3</option>
+			  		<option value="4">3ème4</option>
+			</select>
+		<!--div class="row" style="margin-top:10px;margin-bottom:10px">
+		 	<button class="col-xs-offset-1 col-xs-10 col-md-4 btn btn-primary" href="#">  Ajouter un cours </button>
+		 	<button class="col-xs-offset-1 col-xs-10 col-md-4 btn btn-primary" href="#">  Ajouter un cours </button>
+	 	</div>-->
 
 	 	<div class="row" style="margin-top:10px;margin-bottom:10px">
 		 	<button class="col-md-offset-1 col-md-2 col-xs-3 btn btn-primary" href="#"> &lt;- semaine précédente</button>
@@ -35,7 +52,7 @@
 		 	<button class="col-md-2 col-xs-3 btn btn-primary" href="#">  semaine suivante -&gt;</button>
 	 	</div>
 
-	 	<div class="row">
+	 	<div id="emploidutemps" class="row">
 	 		<div class="col-md-1"style="padding: 0">
 
 	 		 	<div class="edt-small"></div>	
@@ -59,7 +76,7 @@
 	 			<div class="edt edt-small blanc"><h1>Midi</h1></div>
 
 	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big vert"><h1>EPS</h1></div>
-	 			<div class="edt edt-small noir" ><h1></h1></div>
+	 			<div data-toggle="modal" data-target="#myModal2" class="edt edt-small noir" ><h1></h1></div>
 
 	 		</div>
 
@@ -70,14 +87,14 @@
 	 			<div class="edt edt-small blanc"><h1>Midi</h1></div>
 
 	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big orange"><h1>Technologie</h1></div>
-	 			<div class="edt edt-big noir"><h1></h1></div>
+	 			<div data-toggle="modal" data-target="#myModal2" class="edt edt-big noir"><h1></h1></div>
 
 	 		</div>
 	 		<div class="col-md-2 semaine" style="padding: 0">
 	 			<div  onclick="javascript:openfenetre()"class="edt edt-small transparent"> <span class="poids-exposant" style="color: orange;"><b>~6kg</b></span><h1>Mercredi 26</h1></div>
 	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big bleu"><h1>Maths</h1></div>
 	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big violet"><h1>Musique</h1></div>
-	 			<div class="edt noir" style="height: 280px;"><h1></h1></div>
+	 			<div data-toggle="modal" data-target="#myModal2" class="edt noir" style="height: 280px;"><h1></h1></div>
 
 	 		</div>
 	 		<div class="col-md-2 semaine"  style="padding: 0"> 
@@ -88,26 +105,98 @@
 
 	 			
 	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big cyan"><h1>Arts Plastiques</h1></div>
-	 			<div class="edt edt-big noir"><h1></h1></div>
+	 			<div data-toggle="modal" data-target="#myModal2" class="edt edt-big noir"><h1></h1></div>
 
 	 		</div>
 	 		<div class="col-md-2 semaine" style="padding: 0"> 
 	 			<div   onclick="javascript:openfenetre()" class="edt edt-small transparent"> <span class="poids-exposant" style="color: green;"><b>~5kg</b></span><h1>Vendredi 28</h1></div>
-	 			<div class="edt edt-big noir"><h1></h1></div>
+	 			<div data-toggle="modal" data-target="#myModal2" class="edt edt-big noir"><h1></h1></div>
 	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big jaune"><h1>Histoire Géo</h1></div>
 	 			<div class="edt edt-small blanc"><h1>Midi</h1></div>
 
 	 			<div data-toggle="modal" data-target="#myModal" class="edt edt-big rose"><h1>Physique Chimie</h1></div>
-	 			<div class="edt edt-small noir"><h1></h1></div>
+	 			<div data-toggle="modal" data-target="#myModal2" class="edt edt-small noir"><h1></h1></div>
 
 	 		</div>
 	 	</div>
+
+	 	<div id="myModal" class="modal fade">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title">Math 11h-13h</h3>
+		      </div>
+		      <div class="modal-body">
+				  <h4>Supprimer ce cours ou absence du professeur ?</h4>
+		 	  </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+		      	<button type="button" class="btn btn-warning" onclick="showalert('alert')" data-dismiss="modal">Absent</button>
+		        <button type="button" class="btn btn-danger" onclick="showalert('alert2')" data-dismiss="modal">Supprimer</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
 		
+		<div id="myModal2" class="modal fade">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h3 class="modal-title">Ajout d'un cours</h3>
+		      </div>
+		      <div class="modal-body">
+				  <div class="row">
+				  	<div class="col-xs-12">
+					  <label class="col-xs-4" for="nom">Debut du cours :</label> <input style="margin-bottom: 5px" class="col-xs-2" type="number" id="nom" value="15"><label class="col-xs-6" for="nom">Heure</label>
+					</div>
+				  	<div class="col-xs-12">
+					  <label class="col-xs-4" for="nom">Durée du cours :</label> <input style="margin-bottom: 5px" class="col-xs-2" type="number" id="nom" value="15"><label class="col-xs-6" for="nom">Heure</label>
+					</div>
+					<div class="col-xs-12">
+
+					  <label class="col-xs-4" for="poids">Cours :</label> 	<select class="col-xs-4">
+							<option value="1">Français</option>
+					  		<option value="2">Maths</option>
+					  		<option value="3">Anglais</option>
+					  		<option value="4">Techno</option>
+					  		<option value="1">Zic</option>
+					  		<option value="2">Equitation</option>
+					  		<option value="3">Midi</option>
+					  		<option value="4">Dessin</option>
+					  		<option value="1">Espagnol</option>
+					  		<option value="2">Allemand</option>
+					  		<option value="3">Jumanji</option>
+					  		<option value="4">Physique Chimie</option>
+					  		<option value="1">SVT</option>
+					</select>
+				    </div>	
+		 	  	 </div>
+		 	  </div>
+		      <div class="modal-footer">
+		      	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+		        <button type="button" class="btn btn-primary" onclick="showalert('alert3')" data-dismiss="modal">Ajouter</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+
 	 </body> 	 
 	 <footer>
 	 	<div class="row">
-		 	<div class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
-			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		 	<div id="alert" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
+			  <strong>Absence du professeur  enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
+			  <strong>Cours supprimé!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</div>
+			<div id="alert3" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
+			  <strong>Cours Ajouté!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
 	 	</div>
 	 </footer>

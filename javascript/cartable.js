@@ -63,7 +63,11 @@ function changeemploi(){
 	$("#emploidutemps").show("progress");
 
 }
+function changefourniture(){
+	$("#formulairemodiffourniture").hide("progress");
+	$("#formulairemodiffourniture").show("progress");
 
+}
 function showalert(alert){
 	$("#"+alert).show();
 	setTimeout(function() {

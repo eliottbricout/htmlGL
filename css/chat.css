@@ -1,0 +1,99 @@
+.chat-model{
+	display: none;
+}
+
+.chat-bottom{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 200px;
+	text-align: center;
+	color: white;
+	background-color: #262626;
+}
+
+.chat-bottom:hover{
+	cursor: pointer;
+	background-color: black;
+}
+
+.chat-header{
+	padding: 5px;
+}
+
+.div-chat{
+	padding: 2px;
+	background-color: #EEE;
+	border-bottom: 1px solid #262626;
+	border-left: 1px solid #262626;
+	border-bottom: 1px solid #262626;
+	color: black;
+	width: 100%;
+}
+
+.div-chat:hover{
+	background-color: #DDD;
+}
+
+.green{
+	color: green;
+}
+
+.chat{
+	width: 200px;
+	position: absolute;
+	bottom: 0;
+	right: 210px;
+	z-index: 100;
+}
+
+.chat-div-button{
+	width: 100%;
+}
+
+.chat-text{
+	width: 134px;
+	border: 1px solid black;
+}
+
+.chat-button{
+	float: right;
+	height: 25px;
+	border: 1px solid black;
+	background-color: #262626;
+	color: white;
+}
+
+.chat-history{
+	height: 200px;
+	width: 100%;
+	overflow-y: auto;
+	border: 1px solid black;
+	background-color: #FAFAFA;
+}
+
+.chat-title{
+	color: white;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: #262626;
+	width: 100%;
+	border: 1px solid black;
+}
+
+.chat-button-close{
+	float: right;
+	width: 24px;
+	height: 29px;
+	line-height: 29px;
+	cursor: pointer;
+}
+
+.chat-message{
+	padding: 5px;
+}
+
+.receive{
+	text-align: right;
+}

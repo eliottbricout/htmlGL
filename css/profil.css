@@ -1,0 +1,48 @@
+.mt-50{
+	margin-top: 50px;
+}
+
+.mt-10{
+	margin-top: 10px;
+}
+
+.ml-10{
+	margin-left: 10px;
+}
+
+.blue-btn{
+	border: none;
+	background-color: #CCC;
+	text-align: center;
+}
+
+.blue-btn:hover{
+	background-color: #BBB;
+}
+
+.btn-150{
+	width: 150px;
+	height: 25px;
+	border: 1px solid black;
+}
+
+.btn-200{
+	margin-top: 10px;
+	height: 30px;
+}
+
+.section{
+	text-align: center;
+	background-color: #262626;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+}
+
+.image-profil{
+	border: 2px solid black;
+}
+
+body{
+	background-color: fuchsia;
+}

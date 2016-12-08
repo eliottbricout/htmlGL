@@ -1,4 +1,5 @@
-function login(){
+function login(event){
+	event.preventDefault();
 	var name = $("#name").val();
 	var action;
 	if(name == "eleve"){
@@ -10,7 +11,8 @@ function login(){
 	}else{
 		action = "accueil_admin.html";
 	}
-	window.location.replace(action);
+	$("#form_connexion").attr("action", action);
+	$("#form_connexion").submit();
 }
 
 function redirect(page){

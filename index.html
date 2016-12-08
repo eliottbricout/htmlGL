@@ -1,18 +1,38 @@
- <!DOCTYPE> 
- <html lang="en"> 
-	 <head>
-	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>Sakado</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/index.css"/>
 	 	<script src="javascript/cartable.js"></script>
-		 <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
-		 <title>moncartable.com</title> 
-	 </head> 
-	 <body> 
-		 	<input type="text" id=name name="name">
-		 	<input type="password" name="password">
-		 	<a href="#">mot de passe oublié</a>
-		 	<button onclick="javascript:login()" type="submit">se connecter</button>
-	 </body> 
- </html> 
+		<script type="text/javascript">
+			$("document").ready(function(){
+				$("#username").focus();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<img alt="Logo NovaGED" src="images/sakado.png">
+			<p>Gestionnaire de cartable</p>
+		</div>
+		<div class="div-center">
+			<form id="form_connexion" method="post">
+				<div class="field-container">
+					<label for="name">Veuillez entrer votre identifiant</label>
+					<input type="text" id="name" name="name" placeholder="Identifiant">
+				</div>
+				<div class="field-container">
+					<label for="password">Veuillez entrer votre mot de passe</label>
+					<input type="password" id="password" name="password">
+				</div>
+				<a href="#">Mot de passe oublié</a>
+				<button type="submit" onclick="javascript:login(event)">Connexion</button>
+			</div>
+		</div>
+	</body>
+</html>

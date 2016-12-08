@@ -66,7 +66,7 @@
 			}
 		}
 		
-		var nbchatopen = 1;
+		var nbchatopen = 0;
 		
 		function closeChat(id){
 			$(".chat-"+id).hide("progress");
@@ -77,26 +77,25 @@
 			var chat = $(".chat-"+id);
 			if(chat.length == 0){
 				nbchatopen++;
-				var clone = $(".chat-1").clone();
-				clone.removeClass("chat-1");
+				var clone = $(".chat-model").clone();
+				clone.removeClass("chat-model");
 				clone.addClass("chat-"+id);
 				clone.find(".chat-name").text(name);
-				clone.find(".chat-history").empty();
 				clone.css("right", (nbchatopen*210)+"px");
-				clone.find(".chat-button-close").prop('onclick',null).off('click');
 				clone.find(".chat-button-close").on("click", function(){
 					closeChat(id);
-				})
+				});
 				clone.find(".chat-button").on("click", function(){
 					sendMessage(id);
 				})
 				$("footer").append(clone);
 			}else{
-				if(chat.attr("visible") === false){
+				console.log(chat.eq(0));
+				if(!(chat.eq(0).is("visible"))){
 					nbchatopen++;
+					chat.eq(0).css("right", (nbchatopen*210+"px"));
+					chat.eq(0).show("progress");
 				}
-				chat.css("right", (nbchatopen*210+"px"));
-				chat.show("progress");
 			}
 		}
 	
@@ -209,15 +208,18 @@
 			<div class="div-chat">Mme Nicolas</div>
 		</div>
 		
-		<div class="chat chat-1">
-			<div class="chat-title"><span class="chat-name">Jordan Bouchoucha</span><span class="ml-10 chat-button-close" onclick="closeChat(1)"><span class="glyphicon glyphicon-remove"></span></span></div>
+		<div class="chat chat-model">
+			<div class="chat-title">
+				<span class="chat-name"></span>
+				<span class="ml-10 chat-button-close"/>
+					<span class="glyphicon glyphicon-remove"></span>
+					</span>
+			</div>
 			<div class="chat-history">
-				<p class="chat-message send"><span class="glyphicon glyphicon-user"></span><span class="ml-10">Yo Jordan !</span></p>
-				<p class="chat-message receive"><span>Tg petit con</span><span class="glyphicon glyphicon-user ml-10"></span></p>
 			</div>
 			<span class="chat-div-button">
 				<input type="text" class="chat-text">
-				<input type="button" class="chat-button" value="Envoyer" onclick="sendMessage(1)">
+				<input type="button" class="chat-button" value="Envoyer"/>
 			</span>
 		</div>
 		

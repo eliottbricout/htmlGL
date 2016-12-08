@@ -1,0 +1,26 @@
+.bouton-menu{
+	height: 40px;
+	border-right: solid 1px darkgray;
+	color: white;
+}
+.bouton-menu:hover{
+	background: black;
+	cursor: pointer;
+}
+
+.top-menu{
+	background: #262626;
+	height: 40px;
+}
+
+@media (max-width: 991px) {
+	.top-menu{
+		background: black;
+		height: 80px;
+	}
+
+}
+
+.center{
+	text-align: center;
+}

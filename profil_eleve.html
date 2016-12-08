@@ -69,8 +69,21 @@
 		var nbchatopen = 0;
 		
 		function closeChat(id){
-			$(".chat-"+id).hide("progress");
+			$(".chat-"+id).hide();
 			nbchatopen--;
+
+			$chatsOpen = $(".chat:visible");
+
+			var curPos = $(".chat-"+id).css("right");
+
+			$chatsOpen.each(function(){
+				var idChat = $(this).data("id");
+				var pos = $(".chat-"+idChat).css("right");
+				pos = pos.substring(0, pos.length-2);
+				if(pos > curPos){
+					$(".chat-"+idChat).css("right", (parseInt(pos)-210)+"px");
+				}
+			});
 		}
 		
 		function openChat(name, id){
@@ -88,10 +101,10 @@
 				clone.find(".chat-button").on("click", function(){
 					sendMessage(id);
 				})
+				clone.data("id", id);
 				$("footer").append(clone);
 			}else{
-				console.log(chat.eq(0));
-				if(!(chat.eq(0).is("visible"))){
+				if(chat.eq(0).css("display") === "none"){
 					nbchatopen++;
 					chat.eq(0).css("right", (nbchatopen*210+"px"));
 					chat.eq(0).show("progress");

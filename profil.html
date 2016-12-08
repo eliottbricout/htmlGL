@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/profil.css"></link>
+	<link rel="stylesheet" href="css/header.css"></link>
+	<link rel="stylesheet" href="css/chat.css"></link>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>	
+	<meta charset="ISO-8859-1">
+	<title>Profil</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+			//stuff
+		});
+		
+		var mode = "visu";
+		
+		function modifierProfil(){
+			if(mode === "visu"){
+				enableForm();
+			}else if(mode === "modif"){
+				if(checkForm()){
+					validateForm();
+				}
+			}
+			return false;
+		}
+		
+		function checkForm(){
+			return true;
+		}
+		
+		function validateForm(){
+			mode = "visu";
+			$(".form-input").each(function () {
+				$(this).attr('disabled', 'disabled');
+			});
+			$("#modif-profil").text("Modifier le profil");
+		}
+		
+		function enableForm(){
+			mode = "modif";
+			$(".form-input").each(function () {
+				$(this).removeAttr('disabled');
+			});
+			$("#modif-profil").text("Valider");
+		}
+		
+		function sendMessage(id){
+			var chat = $(".chat-"+id);
+			var message = chat.find(".chat-text").val();
+			if(message !== ""){
+				chat.find(".chat-text").val("");
+				console.log(message);
+				var p = $("<p>", {"class" : "chat-message send"});
+				var text = $("<span>", {"class" : "ml-10", "text" : message});
+				var icon = $("<span>", {"class": "glyphicon glyphicon-user"});
+				p.append(icon, text);
+				chat.find(".chat-history").append(p);
+			}
+		}
+		
+		var nbchatopen = 1;
+		
+		function closeChat(id){
+			$(".chat-"+id).hide("progress");
+			nbchatopen--;
+		}
+		
+		function openChat(name, id){
+			var chat = $(".chat-"+id);
+			if(chat.length == 0){
+				nbchatopen++;
+				var clone = $(".chat-1").clone();
+				clone.removeClass("chat-1");
+				clone.addClass("chat-"+id);
+				clone.find(".chat-name").text(name);
+				clone.find(".chat-history").empty();
+				clone.css("right", (nbchatopen*210)+"px");
+				clone.find(".chat-button-close").prop('onclick',null).off('click');
+				clone.find(".chat-button-close").on("click", function(){
+					closeChat(id);
+				})
+				clone.find(".chat-button").on("click", function(){
+					sendMessage(id);
+				})
+				$("footer").append(clone);
+			}else{
+				if(chat.attr("visible") === false){
+					nbchatopen++;
+				}
+				chat.css("right", (nbchatopen*210+"px"));
+				chat.show("progress");
+			}
+		}
+	
+	</script>
+	
+	<!-- HEADER -->
+	
+	<div class="row">
+		<div class="top-menu">
+		 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_parent')">
+		 		<h4 class="center"><span class="glyphicon glyphicon-home"></span><span class="ml-10">Accueil</span></h4>
+	 		</div>
+	 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil')">
+		 		<h4 class="center"><span class="glyphicon glyphicon-user"></span><span class="ml-10">Profil</span></h4>
+	 		</div>
+	 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
+	 			<h4 class="center"><span class="glyphicon glyphicon-log-out ml-10"></span><span class="ml-10">Déconnexion</span></h4>
+	 		</div>
+		</div>
+	 </div>
+	 	
+	 <div class="row mt-50">
+		
+		<div class="col-xs-offset-1 col-xs-1">
+			<img class="image-profil" width="150" height="150" alt="Photo de profil" src="images/lucas.png">
+			<button class="blue-btn btn-150" name="modif-image">Modifier</button>
+		</div>
+		
+		<div class="col-xs-offset-1 col-xs-5">
+		
+			<div class="row section">
+				Informations
+			</div>
+		
+			<div class="row mt-10">
+				<label class="col-xs-4" for="nom">
+					Nom :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="nom" id="nom" value="Moura de Oliveira" disabled>
+			</div>
+			<div class="row mt-10">
+				<label class="col-xs-4" for="prenom">
+					Prénom :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="prenom" id="prenom" value="Lucas" disabled>
+			</div>
+			<div class="row mt-10">
+				<label class="col-xs-4" for="classe">
+					Classe :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="classe" id="classe" value="3ème 5" disabled>
+			</div>
+			<div class="row mt-10">
+				<label class="col-xs-4" for="poids">
+					Poids (estimation) :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="poids" id="poids" value="" disabled>
+			</div>
+			
+			<div class="row mt-10 section">
+				Adresse
+			</div>
+			
+			<div class="row mt-10">
+				<label class="col-xs-4" for="ville">
+					Ville :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="ville" id="ville" value="" disabled>
+			</div>
+			<div class="row mt-10">
+				<label class="col-xs-4" for="rue">
+					Rue :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="rue" id="rue" value="" disabled>
+			</div>
+			<div class="row mt-10">
+				<label class="col-xs-4" for="numero">
+					Batiment/Numéro :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="numero" id="numero" value="" disabled>
+			</div>
+			<div class="row mt-10">
+				<label class="col-xs-4" for="postal">
+					Code postal :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="postal" id="postal" value="" disabled>
+			</div>
+			<div class="row mt-10">
+				<label class="col-xs-4" for="mail">
+					Mail :
+				</label>
+				<input type="text" class="form-input col-xs-8" name="mail" id="mail" value="" disabled>
+			</div>
+			<div class="row">
+				<button id="modif-profil" onclick="modifierProfil()" class="blue-btn btn-200 col-xs-offset-6 col-xs-6">
+					Modifier le profil
+				</button>
+			</div>
+		</div>
+	
+	</div>
+	
+	<footer>
+	
+		<div class="chat-bottom">
+			<div class="chat-header"><span class="glyphicon glyphicon-phone"></span><span class="ml-10">Cartable - Chat</span></div>
+			<div class="div-chat" ondblclick="openChat('Jordan Bouchoucha', 1)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">Jordan Bouchoucha</span></div>
+			<div class="div-chat" ondblclick="openChat('Eliotto Bricouti', 2)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">Eliotto Bricouti</span></div>
+			<div class="div-chat">M. Maurice</div>
+			<div class="div-chat">Mme Nicolas</div>
+		</div>
+		
+		<div class="chat chat-1">
+			<div class="chat-title"><span class="chat-name">Jordan Bouchoucha</span><span class="ml-10 chat-button-close" onclick="closeChat(1)"><span class="glyphicon glyphicon-remove"></span></span></div>
+			<div class="chat-history">
+				<p class="chat-message send"><span class="glyphicon glyphicon-user"></span><span class="ml-10">Yo Jordan !</span></p>
+				<p class="chat-message receive"><span>Tg petit con</span><span class="glyphicon glyphicon-user ml-10"></span></p>
+			</div>
+			<span class="chat-div-button">
+				<input type="text" class="chat-text">
+				<input type="button" class="chat-button" value="Envoyer" onclick="sendMessage(1)">
+			</span>
+		</div>
+		
+	</footer>
+
+</body>
+</html>

@@ -177,7 +177,7 @@
 			  </div>
 		      <div class="modal-footer">
 		     	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-		        <button type="button" class="btn btn-primary" onclick="$('.alert').show()" data-dismiss="modal">Enregistrer la fourniture</button>
+		        <button type="button" class="btn btn-primary" onclick="showalert('alert')" data-dismiss="modal">Enregistrer la fourniture</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -186,7 +186,7 @@
 	 </body> 
 	 <footer>
 	 	<div class="row">
-		 	<div class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+		 	<div class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
 	 	</div>

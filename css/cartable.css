@@ -131,6 +131,11 @@
 		height: 80px;
 	}
 
+	.form-pass-name{
+		margin-left: 100px;
+		margin-right: 100px;
+	}
+
 }
 
 .select{
@@ -157,4 +162,14 @@
 .btn-admin{
 	margin-top: 50px;
 	height: 70px;
+}
+
+.form-pass-name{
+	margin-left: 400px;
+	margin-right: 400px;
+	margin-top: 150px;
+}
+
+body{
+	overflow-x: hidden; 
 }

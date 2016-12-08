@@ -11,7 +11,7 @@
 	 </head> 
 	 <body>
 	<div class="row">
-			<div class="top-menu">
+			<div class="top-menu col-xs-12">
 			 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_parent')">
 			 		<h4 class="center">Accueil</h4>
 		 		</div>
@@ -150,7 +150,7 @@
 		      
 			  </div>
 		      <div class="modal-footer">
-		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Retour</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -174,7 +174,7 @@
 			  </div>
 		      <div class="modal-footer">
 		     	<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-		        <button type="button" class="btn btn-primary" onclick="$('.alert').show()" data-dismiss="modal">Enregistrer la fourniture</button>
+		        <button type="button" class="btn btn-primary" onclick="showalert('alert')" data-dismiss="modal">Enregistrer la fourniture</button>
 		      </div>
 		    </div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -183,7 +183,7 @@
 	 </body> 	 
 	 <footer>
 	 	<div class="row">
-		 	<div class="col-xs-12 alert alert-success center" style="display: none;position: absolute;bottom: 0px">
+		 	<div id="alert" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
 	 	</div>

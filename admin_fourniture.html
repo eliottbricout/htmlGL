@@ -64,22 +64,73 @@
 				</div>
 			</div>
 			<div class="col-xs-12 col-md-offset-1 col-md-3" style="margin-top: 40px;">
-				<div class="gris" style="padding: 10px; margin: 5px;border-radius: 2px">
-					<h4>nom : trousse</h4>
-					<h4>desc : ...</h4>
-					<h4>poids : 1500</h4>
+				<div id="requete1" class="gris" style="height:116px;padding: 10px; margin: 5px;border-radius: 2px">
+					<div class="col-xs-10">
+						<h4>nom : trousse</h4>
+						<h4>desc : ...</h4>
+						<h4>poids : 1500</h4>
+					</div>
+					<div class="col-xs-2">
+						<span onclick="showalert('alert2');$('#requete1').hide('progress');$('#requete5').show('progress');" class="glyphicon glyphicon-ok" style="color: green;margin-top: 30px;margin-bottom: 20px;"></span>
+						<span onclick="showalert('alert3');$('#requete1').hide('progress');$('#requete5').show('progress');" class="glyphicon glyphicon-remove" style="color: red;"></"></span>
+					</div>
+				</div>
+				<div id="requete2" class="gris" style="height:116px;padding: 10px; margin: 5px;border-radius: 2px">
+					<div class="col-xs-10">
+						<h4>nom : trousse</h4>
+						<h4>desc : ...</h4>
+						<h4>poids : 1500</h4>
+					</div>
+					<div class="col-xs-2">
+						<span onclick="showalert('alert2');$('#requete2').hide('progress');$('#requete6').show('progress');" class="glyphicon glyphicon-ok" style="color: green;margin-top: 30px;margin-bottom: 20px;"></span>
+						<span onclick="showalert('alert3');$('#requete2').hide('progress');$('#requete6').show('progress');" class="glyphicon glyphicon-remove" style="color: red;"></"></span>
+					</div>
+				</div>
+				<div id="requete3" class="gris" style="height:116px;padding: 10px; margin: 5px;border-radius: 2px">
+					<div class="col-xs-10">
+						<h4>nom : trousse</h4>
+						<h4>desc : ...</h4>
+						<h4>poids : 1500</h4>
+					</div>
+					<div class="col-xs-2">
+						<span onclick="showalert('alert2');$('#requete3').hide('progress');" class="glyphicon glyphicon-ok" style="color: green;margin-top: 30px;margin-bottom: 20px;"></span>
+						<span onclick="showalert('alert3');$('#requete3').hide('progress');" class="glyphicon glyphicon-remove" style="color: red"></span>
+					</div>
+				</div>
+				<div id="requete4" class="gris" style="height:116px;padding: 10px; margin: 5px;border-radius: 2px">
+					<div class="col-xs-10">
+						<h4>nom : trousse</h4>
+						<h4>desc : ...</h4>
+						<h4>poids : 1500</h4>
+					</div>
+					<div class="col-xs-2">
+						<span onclick="showalert('alert2');$('#requete4').hide('progress');" class="glyphicon glyphicon-ok" style="color: green;margin-top: 30px;margin-bottom: 20px;"></span>
+						<span onclick="showalert('alert3');$('#requete4').hide('progress');" class="glyphicon glyphicon-remove" style="color: red"></span>
+					</div>
+				</div>
+				<div id="requete5" class="gris" style="height:116px;padding: 10px; margin: 5px;border-radius: 2px;display:none">
+					<div class="col-xs-10">
+						<h4>nom : trousse</h4>
+						<h4>desc : ...</h4>
+						<h4>poids : 1500</h4>
+					</div>
+					<div class="col-xs-2">
+						<span onclick="showalert('alert2');$('#requete5').hide('progress');" class="glyphicon glyphicon-ok" style="color: green;margin-top: 30px;margin-bottom: 20px;"></span>
+						<span onclick="showalert('alert3');$('#requete5').hide('progress');" class="glyphicon glyphicon-remove" style="color: red"></span>
+					</div>
+				</div>
+				<div id="requete6" class="gris" style="height:116px;padding: 10px; margin: 5px;border-radius: 2px;display:none">
+					<div class="col-xs-10">
+						<h4>nom : trousse</h4>
+						<h4>desc : ...</h4>
+						<h4>poids : 1500</h4>
+					</div>
+					<div class="col-xs-2">
+						<span onclick="showalert('alert2');$('#requete6').hide('progress');" class="glyphicon glyphicon-ok" style="color: green;margin-top: 30px;margin-bottom: 20px;"></span>
+						<span onclick="showalert('alert3');$('#requete6').hide('progress');" class="glyphicon glyphicon-remove" style="color: red"></span>
+					</div>
 				</div>
 
-				<div class="gris" style="padding: 10px;margin: 5px;border-radius: 2px">
-					<h4>nom : trousse</h4>
-					<h4>desc : ...</h4>
-					<h4>poids : 1500</h4>
-				</div>
-				<div class="gris" style="padding: 10px;margin: 5px;border-radius: 2px">
-					<h4>nom : trousse</h4>
-					<h4>desc : ...</h4>
-					<h4>poids : 1500</h4>
-				</div>
 			</div>
 		</div>
 		<div id="myModal" class="modal fade">
@@ -115,7 +166,7 @@
 			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Fourniture Acceptée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
-			<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
+			<div id="alert3" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Fourniture Refusée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
 			<div id="alert4" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">

@@ -3,6 +3,15 @@ $(document).ready(function(){
 		});
 		
 		var mode = "visu";
+
+		function opendivchat(){
+			var input = $('.div-chat input').val();
+			if(input.length >= 1){
+				$('.div-chat-pseudo').show();
+			}else{
+				$('.div-chat-pseudo').hide();
+			}
+		}
 		
 		function modifierProfil(){
 			if(mode === "visu"){

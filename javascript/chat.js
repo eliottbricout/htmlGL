@@ -41,7 +41,7 @@ $(document).ready(function(){
 			$(".form-input").each(function () {
 				$(this).removeAttr('disabled');
 			});
-			$("#modif-profil").text("Valider");
+			$("#modif-profil").text("Sauvegarder mon profil");
 		}
 		
 		function sendMessage(id){
@@ -84,6 +84,7 @@ $(document).ready(function(){
 				nbchatopen++;
 				var clone = $(".chat-model").clone();
 				clone.removeClass("chat-model");
+				clone.hide();
 				clone.addClass("chat-"+id);
 				clone.find(".chat-name").text(name);
 				clone.css("right", (nbchatopen*210)+"px");
@@ -95,6 +96,8 @@ $(document).ready(function(){
 				})
 				clone.data("id", id);
 				$("footer").append(clone);
+				clone.show("progress");
+
 			}else{
 				if(chat.eq(0).css("display") === "none"){
 					nbchatopen++;

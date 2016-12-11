@@ -3,7 +3,7 @@
 }
 
 .chat-bottom{
-	position: absolute;
+	position: fixed;
 	right: 0;
 	bottom: 0;
 	width: 200px;
@@ -41,7 +41,7 @@
 
 .chat{
 	width: 200px;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	right: 210px;
 	z-index: 100;

@@ -1,13 +1,17 @@
  <!DOCTYPE> 
  <html lang="en"> 
 	 <head>
-	 <link rel="stylesheet" href="css/cartable.css"></link>
-	<link rel="stylesheet" href="css/header.css"></link>
 	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	 	<script src="javascript/cartable.js"></script> <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+	 	<script src="javascript/cartable.js"></script> 
+	 		<script src="javascript/chat.js"></script> 
+	<link rel="stylesheet" href="css/chat.css"></link>
+	 <link rel="stylesheet" href="css/cartable.css"></link>
+	<link rel="stylesheet" href="css/header.css"></link>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+
 		 <title>moncartable.com</title> 
 	 </head> 
 	 <body>
@@ -21,6 +25,9 @@
 			 		</div>
 			 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="switchson()">
 				 		<h4 class="center" id="son">Remy Hanquez</h4>
+			 		</div>
+			 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('statistique_parent')">
+				 		<h4 class="center" id="son">Statistique</h4>
 			 		</div>
 			 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
 			 			<h4 class="center"><span class="glyphicon glyphicon-log-out ml-10"></span><span class="ml-10">Déconnexion</span></h4>
@@ -101,7 +108,7 @@
 	 		</div>
 	 	</div>
 
-	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 30%;  position: absolute;top: 0;right: 0; border-left: 2px solid black;display: none">
+	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 30%; z-index: 1000; position: fixed;top: 0;right: 0; border-left: 2px solid black;display: none">
 		 	<span onclick="javascript:closefenetre()" class="glyphicon glyphicon-remove" style="cursor: e-resize"></span> 
 		 	
 		 	<div style="padding-left: 40px">
@@ -191,5 +198,31 @@
 			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
 	 	</div>
-	 </footer>
+	
+		
+		<div class="chat-bottom">
+			<div class="chat-header"><span class="glyphicon glyphicon-phone"></span><span class="ml-10">Cartable - Chat</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('M. Danon (Français)', 1)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">M. Danon (Français)</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Mme. Hanquez (Anglais)', 2)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">Mme. Hanquez (Anglais)</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('M. Maurice (Maths)', 3)">M. Maurice (Maths)</div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Mme Nicolas (SVT)', 4)">Mme Nicolas (SVT)</div>
+			<div class="div-chat"><input onkeyup="opendivchat()"></input></div>
+		</div>
+		
+		<div class="chat chat-model">
+			<div class="chat-title">
+				<span class="chat-name"></span>
+				<span class="ml-10 chat-button-close"/>
+					<span class="glyphicon glyphicon-remove" style="margin-top: 5px"></span>
+					</span>
+			</div>
+			<div class="chat-history">
+			</div>
+			<span class="chat-div-button">
+				<input type="text" class="chat-text">
+				<input type="button" class="chat-button" value="Envoyer"/>
+			</span>
+		</div>
+		
+	</footer>
  </html> 

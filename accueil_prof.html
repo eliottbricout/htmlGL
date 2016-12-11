@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	 	<script src="javascript/cartable.js"></script> <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+	 		<script src="javascript/chat.js"></script> 
+	<link rel="stylesheet" href="css/chat.css"></link>
 		 <title>moncartable.com</title> 
 	 </head> 
 	 <body>
@@ -213,5 +215,29 @@
 	 		<div id="alert2" class="col-xs-12 alert alert-success center" style="display: none;position: fixed;top: 0px">
 			  <strong>Fourniture ajouter!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
-	 </footer>
+	 <div class="chat-bottom">
+			<div class="chat-header"><span class="glyphicon glyphicon-phone"></span><span class="ml-10">Cartable - Chat</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Jax Danon', 1)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">Jax Danon (prof)</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Eric Dernoncourt', 2)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">Eric Dernoncourt (eleve)</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Philippe Marceaux', 3)">Philippe Marceaux (admin)</div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Dark Vador', 4)">Dark Vador (parent)</div>
+			<div class="div-chat"><input onkeyup="opendivchat()"></input></div>
+		</div>
+		
+		<div class="chat chat-model">
+			<div class="chat-title">
+				<span class="chat-name"></span>
+				<span class="ml-10 chat-button-close"/>
+					<span class="glyphicon glyphicon-remove" style="margin-top: 5px"></span>
+					</span>
+			</div>
+			<div class="chat-history">
+			</div>
+			<span class="chat-div-button">
+				<input type="text" class="chat-text">
+				<input type="button" class="chat-button" value="Envoyer"/>
+			</span>
+		</div>
+		
+	</footer>
  </html> 

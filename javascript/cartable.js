@@ -40,6 +40,14 @@ function switchson(){
 }
 
 function changeclass(){
+	var option = $('#pp option');
+	var pp = $('#pp');
+		pp.empty();
+	for(var i=2; i<=option.length;i++){
+		pp.append(option.eq(i));
+	}
+	pp.append(option.eq(1));
+
 	$("#listeleve").hide("progress");
 	var li =$("#listeleve li");
 	var ul =$("#listeleve");

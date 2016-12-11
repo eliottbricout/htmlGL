@@ -8,6 +8,8 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	 	<script src="javascript/cartable.js"></script> <meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+	 		<script src="javascript/chat.js"></script> 
+	<link rel="stylesheet" href="css/chat.css"></link>
 		 <title>moncartable.com</title> 
 	 </head> 
 	 <body>
@@ -99,7 +101,7 @@
 	 		</div>
 	 	</div>
 
-	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 30%;  position: absolute;top: 0;right: 0; border-left: 2px solid black;display: none">
+	 	<div id="fenetre" class="gris-clair" style="height:100%;width: 30%; z-index: 1000; position: fixed;top: 0;right: 0; border-left: 2px solid black;display: none">
 		 	<span onclick="javascript:closefenetre()" class="glyphicon glyphicon-remove" style="cursor: e-resize"></span> 
 		 	
 		 	<div style="padding-left: 40px">
@@ -189,5 +191,29 @@
 			  <strong>Fourniture enregistrée!</strong>  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 			</div>
 	 	</div>
-	 </footer>
+	 <div class="chat-bottom">
+			<div class="chat-header"><span class="glyphicon glyphicon-phone"></span><span class="ml-10">Cartable - Chat</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Jordan Bouchoucha', 1)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">Jordan Bouchoucha</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Eliott Bricout', 2)"><span class=" green glyphicon glyphicon-ok-sign"></span><span class="ml-10">Eliott Bricout</span></div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('M. Maurice', 3)">M. Maurice</div>
+			<div class="div-chat div-chat-pseudo" style="display: none;" ondblclick="openChat('Mme Nicolas', 4)">Mme Nicolas</div>
+			<div class="div-chat"><input onkeyup="opendivchat()"></input></div>
+		</div>
+		
+		<div class="chat chat-model">
+			<div class="chat-title">
+				<span class="chat-name"></span>
+				<span class="ml-10 chat-button-close"/>
+					<span class="glyphicon glyphicon-remove" style="margin-top: 5px"></span>
+					</span>
+			</div>
+			<div class="chat-history">
+			</div>
+			<span class="chat-div-button">
+				<input type="text" class="chat-text">
+				<input type="button" class="chat-button" value="Envoyer"/>
+			</span>
+		</div>
+		
+	</footer>
  </html> 

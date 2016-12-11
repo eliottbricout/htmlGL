@@ -19,11 +19,14 @@
 	
 	<div class="row">
 		<div class="top-menu">
-		 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_eleve')">
+		 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_parent')">
 		 		<h4 class="center"><span class="glyphicon glyphicon-home"></span><span class="ml-10">Accueil</span></h4>
 	 		</div>
-	 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil_eleve')">
+	 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil_parent')">
 		 		<h4 class="center"><span class="glyphicon glyphicon-user"></span><span class="ml-10">Profil</span></h4>
+	 		</div>
+	 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="switchson()">
+		 		<h4 class="center" id="son">Remy Hanquez</h4>
 	 		</div>
 	 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
 	 			<h4 class="center"><span class="glyphicon glyphicon-log-out ml-10"></span><span class="ml-10">Déconnexion</span></h4>
@@ -34,7 +37,7 @@
 	 <div class="row mt-50">
 		
 		<div class="col-xs-offset-1 col-xs-1">
-			<img class="image-profil" width="150" height="150" alt="Photo de profil" src="images/lucas.png">
+			<img class="image-profil" width="150" height="150" alt="Photo de profil" src="images/parent.png">
 			<button class="blue-btn btn-150" name="modif-image">Modifier</button>
 		</div>
 		
@@ -48,25 +51,21 @@
 				<label class="col-xs-4" for="nom">
 					Nom :
 				</label>
-				<input type="text" class="form-input col-xs-8" name="nom" id="nom" value="Moura de Oliveira" disabled>
+				<input type="text" class="form-input col-xs-8" name="nom" id="nom" value="Dark" disabled>
 			</div>
 			<div class="row mt-10">
 				<label class="col-xs-4" for="prenom">
 					Prénom :
 				</label>
-				<input type="text" class="form-input col-xs-8" name="prenom" id="prenom" value="Lucas" disabled>
-			</div>
-			<div class="row mt-10">
-				<label class="col-xs-4" for="classe">
-					Classe :
-				</label>
-				<input type="text" class="form-input col-xs-8" name="classe" id="classe" value="3ème 5" disabled>
+				<input type="text" class="form-input col-xs-8" name="prenom" id="prenom" value="Vador" disabled>
 			</div>
 			<div class="row mt-10">
 				<label class="col-xs-4" for="poids">
-					Poids (estimation) :
+					Enfants:
 				</label>
-				<input type="text" class="form-input col-xs-8" name="poids" id="poids" value="" disabled>
+				<input type="text" class="form-input col-xs-8" name="poids" id="poids" value="Remy Hanquez" style="margin-bottom:2px " disabled>
+				<input type="text" class="form-input col-xs-offset-4 col-xs-8" name="poids" id="poids" value="Cyril Hanquez" disabled>
+
 			</div>
 			
 			<div class="row mt-10 section">

@@ -1,6 +1,7 @@
  <!DOCTYPE> 
  <html lang="en"> 
 	 <head>
+	 	<link rel="stylesheet" href="css/header.css"></link>
 	 <link rel="stylesheet" href="css/cartable.css"></link>
 	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -13,15 +14,15 @@
 		<div class="row">
 			<div class="top-menu">
 			 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_admin')">
-			 		<h4 class="center">Accueil</h4>
+			 		<h4 class="center"><span class="glyphicon glyphicon-home"></span><span class="ml-10">Accueil</span></h4>
 		 		</div>
-		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil')">
-			 		<h4 class="center">Profil</h4>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil_admin')">
+			 		<h4 class="center"><span class="glyphicon glyphicon-user"></span><span class="ml-10">Profil</span></h4>
 		 		</div>
 		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
-		 			<h4 class="center">se deconnecter</h4>
+		 			<h4 class="center"><span class="glyphicon glyphicon-log-out ml-10"></span><span class="ml-10">Déconnexion</span></h4>
 		 		</div>
-	 		</div>
+			</div>
 	 	</div>
 	 	<div class="row">
 			<button data-toggle="modal" data-target="#myModal" type="button" class="col-xs-offset-3 col-xs-6 btn btn-primary btn-lg btn-admin">Créer une nouvelle élève</button>

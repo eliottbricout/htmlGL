@@ -1,0 +1,104 @@
+ <!DOCTYPE> 
+ <html lang="en"> 
+	 <head>
+	 	<link rel="stylesheet" href="css/header.css"></link>
+	 <link rel="stylesheet" href="css/cartable.css"></link>
+	 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	 	<script src="javascript/cartable.js"></script> 
+	 	<meta http-equiv="content-type" content="text/html; charset=utf-8"> 
+		 <title>moncartable.com</title> 
+	 </head> 
+	 <body>
+		<div class="row">
+			<div class="top-menu">
+			 	<div class="col-md-offset-2 col-md-2 col-xs-6 bouton-menu" style="border-left: solid 1px darkgray;" onclick="redirect('accueil_admin')">
+			 		<h4 class="center"><span class="glyphicon glyphicon-home"></span><span class="ml-10">Accueil</span></h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('profil_admin')">
+			 		<h4 class="center"><span class="glyphicon glyphicon-user"></span><span class="ml-10">Profil</span></h4>
+		 		</div>
+		 		<div class="col-md-2 col-xs-6 bouton-menu" onclick="redirect('index')">
+		 			<h4 class="center"><span class="glyphicon glyphicon-log-out ml-10"></span><span class="ml-10">Déconnexion</span></h4>
+		 		</div>
+			</div>
+	 	</div>
+	 	<div class="row">
+		 	<div style="margin-top: 70px; text-align: center;">
+		 	<label>depart :
+			 	<select class="select" style="width: 120px;margin-left: 5px;">
+					 <option>semaine 1</option>
+					 <option>semaine 2</option>
+					 <option>semaine 3</option>
+					 <option>semaine 4</option>
+					 <option>semaine 5</option>
+					 <option>semaine 6</option>
+					 <option>semaine 7</option>
+					 <option>semaine 8</option>
+					 <option>semaine 9</option>
+					 <option>semaine 10</option>
+					 <option>semaine 11</option>
+					 <option>semaine 12</option>
+					 <option>semaine 13</option>
+					 <option>semaine 14</option>
+
+					</select>
+				</label>
+				<label>fin :
+					<select class="select" style="width: 120px;margin-left: 5px">
+					 <option>semaine 1</option>
+					 <option>semaine 2</option>
+					 <option>semaine 3</option>
+					 <option>semaine 4</option>
+					 <option>semaine 5</option>
+					 <option>semaine 6</option>
+					 <option>semaine 7</option>
+					 <option>semaine 8</option>
+					 <option>semaine 9</option>
+					 <option>semaine 10</option>
+					 <option>semaine 11</option>
+					 <option>semaine 12</option>
+					 <option>semaine 13</option>
+					 <option>semaine 14</option>
+
+				</select>
+				</label>
+				<button class="btn btn-primary" >Générer</button>
+
+			</div>
+			<div class="center">
+			  <select style="margin: 0px 0px 5px 0px;width: 450px;	" class="select" type="text" id="tuteur">	
+			  		<option value="1">ABERNATHY, Ralph</option>
+			  		<option value="2">ARAGON, L</option>
+			  		<option value="3">ARGOULT</option>
+			  		<option value="1">ARON, Raymond</option>
+			  		<option value="2">BARCLAY, Eddie</option>
+			  		<option value="3">BARRAULT, Jean-Louis</option>
+			  		<option value="1">BON, Frédéric</option>
+			  		<option value="2">BURNIER, Michel-Antoine</option>
+			  		<option value="3">CAMUS, Albert</option>
+			  		<option value="1">CHEVERNY, Julien</option>
+			  		<option value="2">CHIRAC, Jacques	</option>
+			  		<option value="3">CLAUDIUS-PETIT, Eugène</option>
+			  		<option value="1">COLOMBO, Pia</option>
+			  		<option value="2">CREVEL, René </option>
+			  		<option value="3">DALADIER, Edouard </option>
+			  		<option value="1">DE SAINT-JORRE </option>
+			  		<option value="2">DEBRé, Michel </option>
+			  </select> 
+			</div>
+		</div>
+
+	 	<div style="margin-top: 20px; text-align: center;">
+			 <img src="images/statistique.png">
+		</div>
+		<div style="margin-top: 50px; text-align: center;">
+			 <button class="btn btn-primary" onclick="window.location('images/statistique.png')">Télécharger</button>
+		</div>
+		 
+	</body>
+	<footer>
+	 </footer>
+ </html> 
